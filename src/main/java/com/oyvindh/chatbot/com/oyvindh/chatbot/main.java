@@ -9,7 +9,7 @@ public class main {
         System.out.println("I was created in " + birthYear + ".");
         System.out.println("Please, remind me your name. ");
     }
-    static void remindName() {
+    public static void remindName() {
         String name = scanner.nextLine();
         if (name.equalsIgnoreCase("Øyvind")) {
             System.out.println("That name... is questionable... well, let's just move on " + name + "! :) ");
