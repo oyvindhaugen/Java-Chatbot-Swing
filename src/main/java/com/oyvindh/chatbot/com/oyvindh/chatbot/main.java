@@ -1,4 +1,4 @@
-package com.oyvindh.chatbot;
+package com.oyvindh.chatbot.com.oyvindh.chatbot;
 
 import java.util.Scanner;
 
@@ -77,8 +77,8 @@ public class main {
         test();
         end();
     }
-}
 
+}
 
 
 
