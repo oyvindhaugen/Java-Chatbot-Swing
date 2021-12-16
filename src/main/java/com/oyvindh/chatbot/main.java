@@ -7,7 +7,7 @@ public class main {
     static void greet(String assistantName, String birthYear) {
         System.out.println("Hello! My name is " + assistantName + ".");
         System.out.println("I was created in " + birthYear + ".");
-        System.out.println("Please, remind me your name. ");
+        System.out.println("Please, remind me your name: ");
     }
     static void remindName() {
         String name = scanner.nextLine();
@@ -59,6 +59,7 @@ public class main {
                 ++currentNumber;
                 answerFromUser = scanner.nextInt();
             } else {
+                System.out.println("You failed, please continue on.");
                 break;
             }
         }
