@@ -2,6 +2,7 @@ package com.oyvindh.chatbot.com.oyvindh.chatbot;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -55,16 +56,17 @@ class Chat extends JFrame implements ActionListener {
   public void actionPerformed(ActionEvent e) {
     String string = e.getActionCommand();
     String inputContent = input.getText();
-    String[] chatbot = {"what is " + "name", "how to", "who are", "how come", "how are" + "you"};
+    String[] chatbot = {"what is your name", "how to", "who are", "how come", "how are" + " you"};
     String answerContentStatus = "Hello! My name is IM Haugaland Bot, what is yours?" + "\n";
     String answerContentStatusNameResponse = "That's a really nice name! Is there anything you're wondering about?";
     String answerContentStatus1 = "I am good thank you, how are you today?" + "\n";
     String answerContentStatus2 = "That's good to hear \n" + "lmao";
     String answerContentError = "Error";
     if (string.equals("Send")) {
-      if (inputContent.contains(chatbot[0])) {
-        answerContent.append(answerContentStatus + "\n");
-        // try to implement so it responds with answerContentStatusNameResponse when user replies with their name.z
+      if (inputContent.toLowerCase().contains(chatbot[4].toLowerCase())) {
+        // use this: https://www.baeldung.com/string-contains-multiple-words
+        // maybe try to make it recognize a certain word at a time and make it check multiple times for multiple words
+        // try to implement so it responds with answerContentStatusNameResponse when user replies with their name.
       } else {
         answerContent.append(answerContentError + "\n");
       }
